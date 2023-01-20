@@ -1,0 +1,33 @@
+package org.com;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class TestAuto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Tamilselvi\\eclipse-Java\\SeleniumDemo\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://ebiz.licindia.in/D2CPM/?_ga=2.133470342.949121863.1674115920-339418983.1674115920#Register");
+		driver.findElement(By.name("passportNumber")).sendKeys("53689085");
+		driver.findElement(By.name("emailId")).sendKeys("tamil78mail.com");
+        driver.findElement(By.name("panNumber")).sendKeys("F728K");
+        driver.findElement(By.name("policyNumber")).sendKeys("63883");
+        driver.findElement(By.name("premiumAmount")).sendKeys("00000");
+		driver.findElement(By.name("mobileNumber")).sendKeys("738290278");
+		WebElement element = driver.findElement(By.id ("radio-1151-boxLabelEl"));
+		element.click();
+		element.isSelected();
+		
+		Select no =new Select(driver.findElement(By.id("da_combo-1122-trigger-picker")));
+		no.selectByIndex(0);
+		String text = driver.findElement(By.xpath("//*[@id=\'da_form-1141_header-title-textEl\']/center/span")).getText();
+		System.out.println(text);
+		driver.findElement(By.id("da_button-1129-btnEl")).click();
+	}
+
+}
