@@ -21,7 +21,7 @@ public class TestAuto {
 		driver.findElement(By.name("mobileNumber")).sendKeys("738290278");
 		WebElement element = driver.findElement(By.id ("radio-1151-boxLabelEl"));
 		element.click();
-		
+		element.clear();
 		
 		Select no =new Select(driver.findElement(By.id("da_combo-1122-trigger-picker")));
 		no.selectByIndex(0);
