@@ -1,3 +1,5 @@
 int a=10;
 int b=29;
 System.out.println(a)
+
+enter valuea:10
